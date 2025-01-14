@@ -1,0 +1,7 @@
+.app{
+  display: flex;
+  //height: 100vh;
+  @media screen and (max-width: 1200px) {
+    height: unset;
+  }
+}
