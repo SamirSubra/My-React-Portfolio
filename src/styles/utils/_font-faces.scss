@@ -1,0 +1,49 @@
+/* IBMPlexSans Regular */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('../../assets/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* IBMPlexSans SemiBold */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('@/assets/fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* IBMPlexSans Bold */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('@/assets/fonts/IBMPlexSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* IBMPlexSans Italic */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('@/assets/fonts/IBMPlexSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* IBMPlexSans Bold Italic */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('@/assets/fonts/IBMPlexSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/**************************************/
+
+/* IBMPlexSerif Regular */
+@font-face {
+  font-family: 'IBMPlexSerif';
+  src: url('@/assets/fonts/IBMPlexSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

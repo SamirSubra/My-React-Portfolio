@@ -1,0 +1,40 @@
+@use "./fonts";
+@import "./variables";
+
+%heading-1 {
+  @include fonts.ez-font($IBMPlexSans, 600);
+  @include fonts.ez-font-size(48px, 28px);
+  //@include fonts.ez-line-height(80px, 45px);
+}
+
+%heading-2 {
+  @include fonts.ez-font($IBMPlexSans, 600);
+  @include fonts.ez-font-size(48px, 28px);
+  background: $linear-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+%heading-3 {
+  @include fonts.ez-font($IBMPlexSans, 700);
+  @include fonts.ez-font-size(21px, 16px);
+  //color: $black;
+}
+
+
+%paragraph {
+  @include fonts.ez-font($IBMPlexSans, normal);
+  @include fonts.ez-font-size(18px);
+  //color: $text;
+}
+
+%big-text {
+  @include fonts.ez-font-size(18px, 12px);
+
+}
+
+%small-text {
+  @include fonts.ez-font-size(14px, 12px);
+}
