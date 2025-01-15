@@ -9,15 +9,15 @@ const ContactPage = () => {
         message: "",
     });
 
-    const [formStatus, setFormStatus] = useState(""); // Pour afficher un message de statut (succès ou erreur)
-    const [isSubmitting, setIsSubmitting] = useState(false); // Pour éviter les soumissions multiples
+    const [formStatus, setFormStatus] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Fonction pour mettre à jour les données du formulaire
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target; // Utilisation de 'name' pour la clé dynamique
+        const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: value, // Mise à jour correcte de la clé dynamique
+            [name]: value,
         }));
     };
 
@@ -34,17 +34,17 @@ const ContactPage = () => {
         setIsSubmitting(true);
         setFormStatus("");
 
-        // Envoi des données avec EmailJS
+
         emailjs
             .send(
-                "service_s64sn9u", // Remplace par ton Service ID
-                "template_p8v2h5s", // Remplace par ton Template ID
+                "service_s64sn9u",
+                "template_p8v2h5s",
                 formData,
-                "PJD5XNBTQh7uWHxZh" // Remplace par ton User ID
+                "PJD5XNBTQh7uWHxZh"
             )
             .then(() => {
                 setFormStatus("Message envoyé avec succès !");
-                setFormData({ from_name: "", from_email: "", message: "" }); // Réinitialiser le formulaire
+                setFormData({ from_name: "", from_email: "", message: "" });
             })
             .catch((error) => {
                 console.error("Erreur lors de l'envoi :", error);
