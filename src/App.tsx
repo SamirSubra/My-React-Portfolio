@@ -5,6 +5,7 @@ import "./App.scss";
 import "@/styles/index.scss";
 import AboutPage from "./pages/AboutPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import ProjectsPage from "./pages/ProjectsPage.tsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={<HomePage/>} />
                 <Route path="/about" element={<AboutPage/>} />
                 <Route path="/contact" element={<ContactPage/>} />
+                <Route path="/projects" element={<ProjectsPage/>} />
             </Routes>
         </div>
     </BrowserRouter>

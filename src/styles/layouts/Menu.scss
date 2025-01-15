@@ -2,6 +2,7 @@
 
 .menu{
   background-color: $black;
+  flex-shrink: 0;
   .side-menu{
     height: 100vh;
 

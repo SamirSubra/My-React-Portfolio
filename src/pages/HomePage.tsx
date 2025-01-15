@@ -10,7 +10,7 @@ const HomePage = () => {
                 <div className="left">
                     <h1 className="title"><span>Mon nom est </span>Samir Subra</h1>
                     <p className="description">Développeur web en recherche d'opportunité</p>
-                    <a href="#" className="btn">Parlez avec moi</a>
+                    <a href="/contact" className="btn">Parlez avec moi</a>
 
                     <div className="contact-info">
                         <div className="phone">

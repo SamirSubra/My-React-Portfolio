@@ -54,14 +54,14 @@ const AboutPage = () => {
                                 egalement effectué 2 stages différents en tant que ciéveloppeur full-stack!
                             </div>
                             <div className="technos">
-                                <p>Technos que je maîtrise actuellement</p>
+                                <p>Technos que je maîtrise actuellement (ce portfolio utilise actuellement les 4 premiers outils de la liste)</p>
                                 <ul className="technos-list">
                                     <li className="technos-list__item"><img src={tsIcon} alt=""/></li>
                                     <li className="technos-list__item"><img src={sassIcon} alt=""/></li>
                                     <li className="technos-list__item"><img src={reactIcon} alt=""/></li>
+                                    <li className="technos-list__item"><img src={gitIcon} alt=""/></li>
                                     <li className="technos-list__item"><img src={nodeIcon} alt=""/></li>
                                     <li className="technos-list__item"><img src={mysqlIcon} alt=""/></li>
-                                    <li className="technos-list__item"><img src={gitIcon} alt=""/></li>
                                 </ul>
                             </div>
                             <div className="quote">
