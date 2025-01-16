@@ -7,14 +7,14 @@
     padding: 50px 80px 50px 40px;
     @media screen and (max-width: 1200px) {
       flex-direction: column;
-      padding: 50px 40px;
+      padding: 0 40px;
     }
 
   }
 
     .section_1{
       @media screen and (max-width: 1200px) {
-        margin-top: 150px;
+        margin-top: 100px;
       }
       .content{
         margin-top: 38px;
@@ -150,6 +150,7 @@
     }
     .section_2{
       background: $linear-gradient;
+      margin-top: 50px;
 
       .container{
         display: flex;
@@ -158,6 +159,7 @@
         @media screen and (max-width: 1200px) {
           flex-direction: column;
           gap: 50px;
+          padding: 50px 40px;
         }
 
         h2, p{

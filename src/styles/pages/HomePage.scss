@@ -15,7 +15,7 @@
     align-items: center;
     @media screen and (max-width: 1200px) {
       flex-direction: column-reverse;
-      margin: 150px 0;
+      margin: 100px 0;
     }
 
     .left{
@@ -90,8 +90,10 @@
             width: 32px;
           }
 
-          p{
+          a{
             font-size: 18px;
+            color: black;
+            text-decoration: underline;
           }
         }
       }

@@ -2,27 +2,58 @@ import linkedinIcon from "@/assets/images/linkedin.png";
 import githubIcon from "@/assets/images/github.png";
 import "@/styles/layouts/Menu.scss";
 import {useEffect, useState} from "react";
+import {Link, useLocation} from "react-router-dom";
 
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+
 
     useEffect(() => {
-        if(isOpen){
-           document.body.style.overflowY = "hidden";
-        }else{
+        if (isOpen) {
+            document.body.style.overflowY = "hidden";
+        } else {
             document.body.style.overflowY = "auto";
         }
     }, [isOpen]);
     return (
         <div className="menu">
-            <div className={isOpen? "side-menu active" : "side-menu" }>
+            <div className={isOpen ? "side-menu active" : "side-menu"}>
                 <div className="top">
                     <p className="title">Samir subra</p>
                     <ul className="links-list">
-                        <li className="links-list__item"><a href="/">Accueil</a></li>
-                        <li className="links-list__item"><a href="/about">A Propos</a></li>
-                        <li className="links-list__item"><a href="/projects">Projets</a></li>
-                        <li className="links-list__item"><a href="/contact">Contact</a></li>
+                        <li className="links-list__item">
+                            <Link
+                                to="/"
+                                className={location.pathname === "/" ? "active" : ""}
+                            >
+                                Accueil
+                            </Link>
+                        </li>
+                        <li className="links-list__item">
+                            <Link
+                                to="/about"
+                                className={location.pathname === "/about" ? "active" : ""}
+                            >
+                                A Propos
+                            </Link>
+                        </li>
+                        <li className="links-list__item">
+                            <Link
+                                to="/projects"
+                                className={location.pathname === "/projects" ? "active" : ""}
+                            >
+                                Projets
+                            </Link>
+                        </li>
+                        <li className="links-list__item">
+                            <Link
+                                to="/contact"
+                                className={location.pathname === "/contact" ? "active" : ""}
+                            >
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="bottom">
@@ -37,7 +68,7 @@ const Menu = () => {
                     </p>
                 </div>
             </div>
-            <button className={isOpen? "burger-menu active" : "burger-menu" } onClick={() => setIsOpen(!isOpen)}>
+            <button className={isOpen ? "burger-menu active" : "burger-menu"} onClick={() => setIsOpen(!isOpen)}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>

@@ -15,11 +15,11 @@ import cvPDF from "@/assets/files/CV_Samir_SUBRA.pdf"
 
 const AboutPage = () => {
     return (
-        <div id="about-page">
+        <div id="about-page" className="page">
                 <section className="section_1">
                     <div className="container">
 
-                    <h1>Qui suis-je</h1>
+                    <h1>Qui je suis</h1>
                     <div className="content">
                         <div className="left">
                             <img src={meImg} alt=""/>

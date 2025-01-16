@@ -5,7 +5,6 @@
   flex-shrink: 0;
   .side-menu{
     height: 100vh;
-
     padding: 56px 48px;
     display: flex;
     flex-direction: column;
@@ -15,6 +14,7 @@
 
       &.active{
         display: flex;
+        gap: 50px;
         position: absolute;
         height: 100vh;
         width: 100vw;
@@ -57,21 +57,26 @@
             text-transform: uppercase;
             font-family: $IBMPlexSans;
             max-width: fit-content;
+            position: relative;
             @media screen and (max-width: 1200px) {
               font-size: 40px;
             }
 
+            &:before{
+              content: '';
+              width: 0%;
+              background-image: url("../../assets/images/icons/Line.svg");
+              display: block;
+              height: 3px;
+              position: absolute;
+              top: 50%;
+              transition: all 0.3s ease-in-out;
+            }
 
-            &:hover{
-              position: relative;
+            &:hover, &.active{
               &:before{
                 content: "";
-                background-image: url("../../assets/images/icons/Line.svg");
-                display: block;
-                height: 3px;
                 width: 100%;
-                position: absolute;
-                top: 50%;
               }
             }
           }
@@ -103,6 +108,7 @@
         font-size: 16px;
         @media screen and (max-width: 1200px) {
           max-width: unset;
+          text-align: center;
         }
 
       }

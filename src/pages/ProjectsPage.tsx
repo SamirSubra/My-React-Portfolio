@@ -58,7 +58,7 @@ const ProjectsPage = () => {
     };
 
     return (
-        <div id="projects-page">
+        <div id="projects-page" className="page">
 
             <section className="section_1">
                 <div className="container">

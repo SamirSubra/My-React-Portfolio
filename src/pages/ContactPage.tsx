@@ -56,13 +56,13 @@ const ContactPage = () => {
     };
 
     return (
-        <div id="contact-page">
+        <div id="contact-page" className="page">
             <div className="container">
                 <div className="left">
                     <h2 className="title">Contactez-moi</h2>
                     <div className="infos">
-                        <p className="phone">+33 (0)7 69 03 85 88</p>
-                        <p className="email">samir.subra26@gmail.com</p>
+                        <a href="tel:0769038588" className="phone">+33 (0)7 69 03 85 88</a>
+                        <a href="mailto:samir.subra26@gmail.com" className="email">samir.subra26@gmail.com</a>
                         <div className="links">
                             <a href="https://github.com/SamirSubra">GITHUB</a>
                             <a href="https://www.linkedin.com/in/samir-subra-859331258/">LINKEDIN</a>
@@ -70,47 +70,49 @@ const ContactPage = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <h2 className="title">Formulaire de contact</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="row">
-                            <div className="input">
-                                <label htmlFor="name">Nom / prénom</label>
-                                <input
-                                    type="text"
-                                    name="from_name"
-                                    id="name"
-                                    placeholder="Nom / prénom"
-                                    value={formData.from_name}
-                                    onChange={handleChange}
-                                />
+                    <div className="box">
+                        <h2 className="title">Formulaire de contact</h2>
+                        <form onSubmit={handleSubmit}>
+                            <div className="row">
+                                <div className="input">
+                                    <label htmlFor="name">Nom / prénom</label>
+                                    <input
+                                        type="text"
+                                        name="from_name"
+                                        id="name"
+                                        placeholder="Nom / prénom"
+                                        value={formData.from_name}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="input">
+                                    <label htmlFor="email">Email</label>
+                                    <input
+                                        type="email"
+                                        name="from_email"
+                                        id="email"
+                                        placeholder="Email"
+                                        value={formData.from_email}
+                                        onChange={handleChange}
+                                    />
+                                </div>
                             </div>
                             <div className="input">
-                                <label htmlFor="email">Email</label>
-                                <input
-                                    type="email"
-                                    name="from_email"
-                                    id="email"
-                                    placeholder="Email"
-                                    value={formData.from_email}
+                                <label htmlFor="message">Message</label>
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    placeholder="Message"
+                                    value={formData.message}
                                     onChange={handleChange}
-                                />
+                                ></textarea>
                             </div>
-                        </div>
-                        <div className="input">
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                                name="message"
-                                id="message"
-                                placeholder="Message"
-                                value={formData.message}
-                                onChange={handleChange}
-                            ></textarea>
-                        </div>
-                        <button type="submit" className="btn" disabled={isSubmitting}>
-                            {isSubmitting ? "Envoi en cours..." : "Envoyer"}
-                        </button>
-                        {formStatus && <p className="status-message">{formStatus}</p>}
-                    </form>
+                            <button type="submit" className="btn" disabled={isSubmitting}>
+                                {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                            </button>
+                            {formStatus && <p className="status-message">{formStatus}</p>}
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
